@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1320px;
+  font-family: 'Times New Roman', Times, serif;
+  .content {
+    height: auto;
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    .form-content {
+      padding-bottom: 70px;
+      border: 1px solid #000000;
+      background-color: #f1ebef;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      .form-title {
+        text-align: center;
+        #p1 {
+          padding: 20px;
+          font-size: 40px;
+          color: #cf5a45;
+        }
+        #p2 {
+          padding: 5px 30px 10px;
+          font-size: 40px;
+          color: #cf5a45;
+        }
+      }
+      .form-input {
+        .input-guide {
+          font-size: 17px;
+          margin-top: 10px;
+          margin-left: 350px;
+        }
+        .input-group {
+          margin-bottom: 20px;
+          margin-left: 230px;
+          display: flex;
+          .input-form{
+            #msg {
+              color: red;
+              font-style: italic;
+              font-size: 13px;
+              margin-left: 270px;
+              visibility: hidden;
+            }
+            label {
+              font-size: 20px;
+              margin-left: 30px;
+            }
+            input {
+              border: 0.5px solid red;
+              padding: 2px;
+              margin-left: 15px;
+              width: 295px;
+              height: 28px;
+              &:focus-visible {
+                outline: none;
+              }
+              &:invalid{
+                outline: 2px solid rgb(221, 137, 137);
+                border-radius: 4px;
+              }
+              &:valid{
+                outline: 2px solid green;
+                border-radius: 6px;
+              }
+            }
+          }
+          .reload {
+            margin-top: 20px;
+            a {
+              i {
+                margin-left: 8px;
+                color: rgb(94, 0, 245);
+              }
+            }
+          }
+        } 
+      }
+      .captcha {
+        margin-left: 420px;
+        margin-right: auto;
+      }
+      .form-click {
+        display: flex;
+        justify-content: center;
+
+        .form-button {
+          margin: 10px 20px;
+          // visibility: hidden;
+          button {
+            margin-left: 12px;
+            width: 310px;
+            height: 35px;
+            font-size: 17px;
+            background-color: #cf5a45;
+            padding: 7px 20px;
+            color: white;
+            font-weight: 100px;
+            border-radius: 8px;
+            cursor: pointer;
+          }
+        }
+        .form-next {
+          margin: 10px 0px;
+          button {
+            font-size: 15px;
+            background-color: #cf5a45;
+            padding: 7px 20px;
+            color: white;
+            font-weight: 100px;
+            border-radius: 8px;
+            cursor: pointer;
+          }
+        }
+      }
+      .form-score {
+        #score {
+          visibility: hidden;
+          margin-left: 25px;
+          font-size: 19px;
+          font-weight: 700;
+        }
+        #data-form {
+          margin-left: 25px;
+          font-size: 18px;
+          word-spacing: 3px;
+        }
+      }
+      @media (max-width: 1000px) {
+        .form-input{
+          width: 100%;
+          .input-guide{
+            margin-left: 80px;
+          }
+          .input-group{
+            .input-form{
+              height: 100px;
+            }
+            label{
+              margin-left:10px;
+              font-size: 20px;
+            }
+            input{
+              width: 50px;
+            }
+        
+          }
+
+        }
+      }
+      @media (max-width: 640px) {
+        .form-input{
+          width: 100%;
+          height: 120px;
+          .input-guide{
+            margin-left: 0px;
+          }
+          .input-group{
+            margin-left:80px ;
+            .input-form{
+              height: 65px;
+              margin-left: 0px !important;
+            }
+            #msg{
+              // margin-left: none;
+              margin-left: 0px !important;                           
+            }
+            label{
+              margin-left:0px !important;
+              font-size: 16px !important;
+            }
+            input{
+              margin-left: 10px !important;
+              width: 100px !important;
+            }
+        
+          }
+        }
+      }
+    }
+  }
+}
